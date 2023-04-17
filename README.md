@@ -24,7 +24,7 @@ pod 'KZLog', :git => 'https://github.com/KhazanGu/WebSocketServer.git'
 
 ## Author
 
-Khazan@foxmail.com, khazan@foxmail.com
+Khazan@foxmail.com
 
 ## License
 
