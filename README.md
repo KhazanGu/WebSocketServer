@@ -20,6 +20,11 @@ it, simply add the following line to your Podfile:
 pod 'WebSocketServer'
 ```
 
+```ruby
+pod 'KZLog', :git => 'https://github.com/KhazanGu/WebSocketServer.git'
+```
+
+
 ## Author
 
 Khazan@foxmail.com, khazan@foxmail.com
@@ -29,7 +34,12 @@ Khazan@foxmail.com, khazan@foxmail.com
 WebSocketServer is available under the MIT license. See the LICENSE file for more info.
 
 
-## Init
+## Summary
+
+The WebSocketServer class is an object for management to communicate with clients. 
+
+
+## Create
 
 Create a server object for management.
 
@@ -51,7 +61,6 @@ Stop the WebSocket Server.
 
 ```
 server.stop()
-
 ```
 
 ## Send text
