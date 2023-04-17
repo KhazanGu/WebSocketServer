@@ -1,0 +1,6 @@
+framework module WebSocketServer {
+  umbrella header "WebSocketServer-umbrella.h"
+
+  export *
+  module * { export * }
+}

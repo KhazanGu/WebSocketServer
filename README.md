@@ -27,3 +27,52 @@ Khazan@foxmail.com, khazan@foxmail.com
 ## License
 
 WebSocketServer is available under the MIT license. See the LICENSE file for more info.
+
+
+## Init
+
+Create a server object for management.
+
+```
+let server = WebSocketServer()
+```
+
+## Start
+
+Run the WebSocket Server on the specified port.
+
+```
+server.start(with: self, port: port)
+```
+
+## Stop 
+
+Stop the WebSocket Server.
+
+```
+server.stop()
+
+```
+
+## Send text
+
+Send text to client.
+
+```
+server.send(text: text)
+```
+
+
+## WebSocketServerDelegate
+
+Get the IP address after the server start.
+
+```
+func started(on IPAddress: String)  -> Void
+```
+
+Receive the text from the client.
+
+```
+func didReceive(text: String) -> Void
+```

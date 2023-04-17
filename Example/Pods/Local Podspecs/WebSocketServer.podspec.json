@@ -1,0 +1,27 @@
+{
+  "name": "WebSocketServer",
+  "version": "0.1.0",
+  "summary": "A short description of WebSocketServer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Khazan@foxmail.com/WebSocketServer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Khazan@foxmail.com": "khazan@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Khazan@foxmail.com/WebSocketServer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "WebSocketServer/Classes/**/*",
+  "dependencies": {
+    "SwiftNIOWebSocket": [
+
+    ]
+  }
+}
