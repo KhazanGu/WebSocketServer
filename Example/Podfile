@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'WebSocketServer_Example' do
+  pod 'WebSocketServer', :path => '../'
+
+  target 'WebSocketServer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
