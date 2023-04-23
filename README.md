@@ -18,7 +18,7 @@ it, simply add the following line to your Podfile:
 
 
 ```ruby
-pod 'KZWebSocketServer', :git => 'https://github.com/KhazanGu/WebSocketServer.git'
+pod 'WebSocketServer', :git => 'https://github.com/KhazanGu/WebSocketServer.git'
 ```
 
 
