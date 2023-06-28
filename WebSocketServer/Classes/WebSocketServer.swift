@@ -18,7 +18,9 @@ public protocol WebSocketServerDelegate {
     func didReceive(text: String) -> Void
 }
 
+
 var GlobalIPAddress = ""
+
 
 public class WebSocketServer: NSObject {
     
@@ -52,10 +54,12 @@ public class WebSocketServer: NSObject {
         
         GlobalIPAddress = IPAddress
         
-        let queue = DispatchQueue(label: "websocketserver")
+        let queue = DispatchQueue(label: "websocketserver", qos: .background)
+        
         queue.async {
             self.start(on: IPAddress, port: port)
         }
+        
     }
     
     
@@ -111,14 +115,11 @@ public class WebSocketServer: NSObject {
         }
         print("Server started and listening on \(localAddress)")
         
+        try? self.channel?.closeFuture.wait()
+        
         DispatchQueue.main.async {
             self.delegate?.started(on: IPAdress)
         }
-        
-        // This will never unblock as we don't close the ServerChannel
-        try? channel?.closeFuture.wait()
-        
-        print("Server closed")
         
     }
     
@@ -128,10 +129,8 @@ public class WebSocketServer: NSObject {
     }
     
     public func send(text: String) -> Void {
-        
         self.client?.write(text: text)
     }
-    
     
 }
 
